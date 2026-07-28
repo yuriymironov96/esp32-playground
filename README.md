@@ -25,4 +25,6 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - Instead of two modes, implement cyclic switching between three or more speeds.
 - Add output to Serial Monitor with a message about the selected mode.
 
+### Demo
+
 ![ESP32 LED controller demo](demo.gif)
