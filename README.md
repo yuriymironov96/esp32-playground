@@ -6,3 +6,7 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [Schematic](https://99tech.com.au/mx-m/esp32/esp32-s3-yd_schematics.pdf);
 - [ESP32-S3-WROOM-1 Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf);
 - [Pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-S3-DevKitC-Pinout.png);
+
+### Mini-projects
+
+- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
