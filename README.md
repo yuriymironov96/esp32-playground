@@ -10,3 +10,4 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 ### Mini-projects
 
 - [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
+- [Debounced btn press event handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/button-debounce-logic-analyzer);
