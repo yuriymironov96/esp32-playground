@@ -1,15 +1,29 @@
 #include <Arduino.h>
+#include <config.h>
+#include <button_controller.h>
+#include <blink_controller.h>
+#include <monitor.h>
 
-#define LED_PIN 38
+BlinkController blinkController = BlinkController(LED_PIN);
+ButtonStateController buttonStateController = ButtonStateController(BTN_PIN);
 
-void setup() {
-    pinMode(LED_PIN, OUTPUT);
+void setup()
+{
+    Serial.begin(Config::BAUD_RATE);
+    blinkController.init();
+    buttonStateController.init();
+
 }
 
 void loop()
 {
-    digitalWrite(LED_PIN, HIGH);
-    delay(500);
-    digitalWrite(LED_PIN, LOW);
-    delay(500);
+    if (buttonStateController.consumePress())
+    {
+        blinkController.setNextState();
+    }
+    blinkController.refresh();
+
+    if (printIfNthIteration()) {
+        Serial.println("Serial monitor print!");
+    }
 }
