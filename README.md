@@ -12,3 +12,4 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
 - [Debounced btn press event handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/button-debounce-logic-analyzer);
 - [Light-dependent resistor value reading experiment, with variable attenuation and resolution for ADC](https://github.com/yuriymironov96/esp32-playground/tree/feat/ldr-experiment);
+- [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop)
