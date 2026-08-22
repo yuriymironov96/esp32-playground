@@ -17,3 +17,7 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 ### Result
 
 ![monitor.png](monitor.png)
+
+## Fritzing
+
+![circuit.png](circuit.png)
