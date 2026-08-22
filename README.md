@@ -14,3 +14,4 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [Light-dependent resistor value reading experiment, with variable attenuation and resolution for ADC](https://github.com/yuriymironov96/esp32-playground/tree/feat/ldr-experiment);
 - [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop);
 - [Relay read/write experiment](https://github.com/yuriymironov96/esp32-playground/tree/feat/relay);
+- [Timer-driven relay/fan controller with no code in loop](https://github.com/yuriymironov96/esp32-playground/tree/feat/time-controlled-fan);
