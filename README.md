@@ -7,10 +7,19 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP32-S3-WROOM-1 Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf);
 - [Pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-S3-DevKitC-Pinout.png);
 
-### Mini-projects
+### Lesson 25: MCU timers
 
-- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
-- [Debounced btn press event handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/button-debounce-logic-analyzer);
-- [Light-dependent resistor value reading experiment, with variable attenuation and resolution for ADC](https://github.com/yuriymironov96/esp32-playground/tree/feat/ldr-experiment);
-- [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop);
-- [Relay read/write experiment](https://github.com/yuriymironov96/esp32-playground/tree/feat/relay);
+- Implemented a timer-driven relay controller;
+- Empty `loop`: everything works on times, no `delay` function as well;
+- Added watchdog to monitor program health;
+- Added usage of `Preferences` API to renew MCU state on reload;
+- Serial monitor logging;
+- Led state indicator;
+
+### Demo
+
+![demo.gif](demo.gif)
+
+### Circuit
+
+![circuit.png](circuit.png)
