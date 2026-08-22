@@ -7,9 +7,13 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP32-S3-WROOM-1 Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf);
 - [Pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-S3-DevKitC-Pinout.png);
 
-### Mini-projects
+### Lesson 22: Relay
 
-- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
-- [Debounced btn press event handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/button-debounce-logic-analyzer);
-- [Light-dependent resistor value reading experiment, with variable attenuation and resolution for ADC](https://github.com/yuriymironov96/esp32-playground/tree/feat/ldr-experiment);
-- [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop)
+- One GPIO should control a relay;
+- Another GPIO should read a value from relay's closed circuit;
+- Interrupts should be used;
+- A difference between "toggle relay" and "relay returns signal" timings should be measured;
+
+### Result
+
+![monitor.png](monitor.png)
