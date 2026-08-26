@@ -15,3 +15,4 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop);
 - [Relay read/write experiment](https://github.com/yuriymironov96/esp32-playground/tree/feat/relay);
 - [Timer-driven relay/fan controller with no code in loop](https://github.com/yuriymironov96/esp32-playground/tree/feat/time-controlled-fan);
+- [ESP IDF blink](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp-idf-blink);
