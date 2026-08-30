@@ -11,8 +11,6 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 
 ### Fritzing
 
-![circuit.png](circuit.png)
-
 ESP32 ports 4-7 with internal pulldown listen to button presses. Pins 10-13 respectively are triggered as digital output on button presses, and we feed their output into logical analyzer.
 
 ### Task comments
