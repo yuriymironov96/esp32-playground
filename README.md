@@ -7,12 +7,49 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP32-S3-WROOM-1 Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf);
 - [Pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-S3-DevKitC-Pinout.png);
 
-### Mini-projects
+### Lesson 26: ESP IDF debounce experiments
 
-- [Non-blocking led blinks powered by buttons](https://github.com/yuriymironov96/esp32-playground/tree/feat/led-btn-boot);
-- [Debounced btn press event handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/button-debounce-logic-analyzer);
-- [Light-dependent resistor value reading experiment, with variable attenuation and resolution for ADC](https://github.com/yuriymironov96/esp32-playground/tree/feat/ldr-experiment);
-- [OOP-style firmware for interrupt-driven periphery handling](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp32-oop);
-- [Relay read/write experiment](https://github.com/yuriymironov96/esp32-playground/tree/feat/relay);
-- [Timer-driven relay/fan controller with no code in loop](https://github.com/yuriymironov96/esp32-playground/tree/feat/time-controlled-fan);
-- [ESP IDF blink](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp-idf-blink);
+### Fritzing
+
+![circuit.png](circuit.png)
+
+ESP32 ports 4-7 with internal pulldown listen to button presses. Pins 10-13 respectively are triggered as digital output on button presses, and we feed their output into logical analyzer.
+
+### Task comments
+
+Task 1:
+`should_toggle_button_1` is set to `true` in GPIO input IRC, superloop polls for `should_toggle_button_1==true` and toggles output pin.
+
+Task 2:
+
+GPIO input ignores events that happened within the interval of 50ms, acts like task 1 otherwise.
+
+Task 3:
+
+`should_toggle_button_3` is set to `true` in GPIO input IRC, superloop polls for `should_toggle_button_3==true` and toggles output pin. Along the way, it also checks current pin state using `gpio_get_level`.
+
+Task 4:
+
+`update_btn_4_state` is an improvised state machine function, being called on every main loop iteration and checking btn state with respect to state variables and rules.
+
+### Runtime behaviour
+
+- D1 - task 1
+- D3 - task 2
+- D7 - task 3
+- D5 - task 4
+
+Each button was pressed 10 times. That means, ideally, we should have seen 5 rises and 5 falls, because button press triggers a toggle. Real results are provided below:
+
+![serial-1](serial-1.png)
+![serial-2](serial-2.png)
+
+
+### Comparison
+
+| Method | False positives                 | Latency                  | Complexity                                                                 | Comments                                             |
+|--------|---------------------------------|--------------------------|----------------------------------------------------------------------------|------------------------------------------------------|
+| Task 1 | 27 events for 10 actual toggles | Negligible               | Low                                          | Not usable for real projects                         |
+| Task 2 | 10 events for 10 actual toggles | 50ms for software signal filtering | Low-to-medium                                                              | Usable for real projects |
+| Task 3 | 11 events for 10 actual toggles | Negligible               | Low | Should be usable for real projects after fine-tuning |
+| Task 4 | 10 events for 10 toggles        | 50ms                     | Medium                                                                     | Usable for real projects                             |
