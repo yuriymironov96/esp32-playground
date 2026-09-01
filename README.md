@@ -18,4 +18,5 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP IDF blink](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp-idf-blink);
 - [ESP IDF software debounce](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp-idf-software-debounce);
 - [ESP IDF hardware debounce](https://github.com/yuriymironov96/esp32-playground/tree/feat/esp-idf-hardware-dbounce);
+- [ESP IDF ADC calibration](https://github.com/yuriymironov96/esp32-playground/tree/feat/lesson-30-module-3.1-calibrated-adc);
 
