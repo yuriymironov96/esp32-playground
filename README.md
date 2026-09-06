@@ -7,9 +7,15 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP32-S3-WROOM-1 Datasheet](https://documentation.espressif.com/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf);
 - [Pinout](https://lastminuteengineers.com/wp-content/uploads/iot/ESP32-S3-DevKitC-Pinout.png);
 
-### Lesson 30: ADC data calibration
+### Lesson 31: ADC data reader with sliding windw filtration
 
-A simple experiment that involves a potentiometer and ESP32 ADC. A couple different ways to read data is used, their values are compared.
+Read illumination value through voltage divider and LDR, feed them into MCU using calibrated ADC. We don't apply new value outright, but instead filter out the noise using custom sliding window algorithm.
+
+### Code structure
+
+- `main.c` is kept as light as it can be, it just calls logic implemented in other modules;
+- `adc.h` initialises ADC driver and lets us get values in a superloop;
+- `hysteresis_moving_average.h` contains a sliding window filteration. It uses a structure to store data - current state, window value and some parameters. To prevent inefficient memory usage, we initialize a fixed-size array for values, filling it using (i + 1) % WINDOW_SIZE approach;
 
 ### Fritzing
 
@@ -19,8 +25,6 @@ A simple experiment that involves a potentiometer and ESP32 ADC. A couple differ
 
 ![monitor.png](monitor.png)
 
-### Measurement comparison charts
+### Demo
 
-![chart-1.png](chart-1.png)
-
-![chart-2.png](chart-2.png)
+![demo.gif](demo.gif)
