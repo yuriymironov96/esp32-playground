@@ -1,8 +1,8 @@
 #include <stdbool.h>
 #define WINDOW_SIZE 10
 
-#define LOWER_THRESHOLD 2000
-#define UPPER_THRESHOLD 2500
+#define LOWER_THRESHOLD 1800
+#define UPPER_THRESHOLD 2200
 #define DEFAULT_STATE false
 
 struct app_avg_state {

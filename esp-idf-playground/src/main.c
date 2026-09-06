@@ -37,7 +37,7 @@ void app_main(void)
         if (state.current_state != current_state) {
             printf("State change detected: prev: %d, next: %d\n", current_state, state.current_state);
             current_state = state.current_state;
-            gpio_set_level(LED_GPIO, current_state);
+            gpio_set_level(LED_GPIO, !current_state);
         }
 
         vTaskDelay(pdMS_TO_TICKS(SAMPLE_PERIOD_MS));
