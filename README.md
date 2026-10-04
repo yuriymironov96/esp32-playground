@@ -21,3 +21,4 @@ A bunch of learning projects using ESP32-S3-N16R8 developemt board.
 - [ESP IDF ADC calibration](https://github.com/yuriymironov96/esp32-playground/tree/feat/lesson-30-module-3.1-calibrated-adc);
 - [ESP IDF ADC+sliding window filtering](https://github.com/yuriymironov96/esp32-playground/tree/feat/lesson-31-module-3.2-adc-ldr-light-detector);
 - [ESP IDF low-level servo+encoder](https://github.com/yuriymironov96/esp32-playground/tree/feat/lesson-35-36-servo-encoder);
+- [ESP IDF UART communication with another MCU](https://github.com/yuriymironov96/esp32-playground/tree/feat/lesson-40-41-uart);
